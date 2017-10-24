@@ -10,7 +10,9 @@ def quicksort(array):
         pivot=array[0] #递归条件
         less=[i for i in array[1:] if  i<=pivot]  #由所有小于基准值的元素组成的子数组
 
+        print(less)
         greater=[i for i in array[1:] if i>pivot]  ##由所有大于基准值的元素组成的子数组
+
     return  quicksort(less)+[pivot]+quicksort(greater)
 
 print(quicksort([10,5,2,3]))
